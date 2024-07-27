@@ -1,5 +1,5 @@
-import appscript
 import os
+import appscript
 
 from pykeynote.keynote_slide import KeynoteSlide
 from pykeynote.keynote_layout import KeynoteLayout
@@ -47,8 +47,6 @@ class KeynoteDoc:
         self._doc.slides[number].delete()
         #app('Keynote').documents[1].slides[its.default_title_item.object_text.contains('2012')].delete()
 
-
-
     def get_current_slide(self):
         return KeynoteSlide(self._doc.current_slide.get())
     # returns a raw slide
@@ -77,7 +75,6 @@ class KeynoteDoc:
     #    app('Keynote').show_next()
     #app('Keynote').documents[1].stop()
     #    app('Keynote').show_previous()
-
     
     def save(self, file_path):
         filepath = appscript.mactypes.File(os.path.abspath(file_path))

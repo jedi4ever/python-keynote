@@ -1,9 +1,13 @@
 [tool.poetry]
-name = "python-keynote"
+name = "pykeynote"
 version = "0.1.0"
 description = "Interact with Apple Keynote application through python"
 authors = ["Patrick Debois <Patrick.Debois@jedi.be>"]
 readme = "README.md"
+
+packages = [
+    { include = "pykeynote", from = "libs" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -15,3 +19,8 @@ pytest = "^8.3.2"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+
+[tool.poetry.scripts]
+demo_keynote = "pykeynote.bin.demo:main"

@@ -1,7 +1,17 @@
-from pykeynote.keynote_app import KeynoteApp
+from pykeynote import KeynoteApp
 import os
+import pytest
 
 class TestKeynoteApp:
+
+
+    @pytest.fixture
+    def test_keynote_file(self):
+        return os.path.join(
+            os.path.dirname(os.path.realpath(__file__)),
+            'data','test.key'
+        )
+    
     def test_my_name(self):
         my_name = "Patrick Debois"
         assert my_name == "Patrick Debois"

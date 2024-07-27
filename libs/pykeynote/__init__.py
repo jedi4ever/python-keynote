@@ -7,3 +7,5 @@ from .keynote_movie import KeynoteMovie
 from .keynote_slide import KeynoteSlide
 from .keynote_text_item import KeynoteTextItem
 from .keynote_theme import KeynoteTheme
+from .keynote_process import KeynoteProcess
+from .keynote_window import KeynoteWindow

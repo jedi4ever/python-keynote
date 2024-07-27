@@ -1,6 +1,5 @@
 import os
-from pykeynote.keynote_app import KeynoteApp
-from pykeynote.keynote_doc import KeynoteDoc
+from pykeynote import KeynoteApp
 import pytest
 
 

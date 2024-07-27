@@ -1,0 +1,58 @@
+
+# appscript
+# https://github.com/HBehrens/pyKeynoteTweet/blob/ba17624a8ae5ee51013541c1d0aa705602d002a1/pyKeynoteTweet.py#L77
+# https://github.com/shaunabanana/SquashNote/blob/1a2dfb9143ee9ef6df0505b7a83d5b297b678266/squash.py#L97
+# https://github.com/Loyale/powerglove/blob/561eab828d32318b4327225f8c61ba5ba13d79fd/src/pgKeynote.py#L8
+
+# master slides
+# https://github.com/JXA-userland/JXA
+
+
+# Fonts, colors etc..
+# app('Keynote').documents[1].slides[1].default_title_item.object_text.color.set([0, 0, 65535])
+# app('Keynote').documents[1].slides[1].default_title_item.object_text.font.set('Impact')
+# app('Keynote').documents[1].slides[1].default_title_item.object_text.size.set(54)
+# app('Keynote').documents[1].slides[1].default_body_item.object_text.color.set([8481, 32896, 16704])
+# app('Keynote').documents[1].slides[1].default_body_item.object_text.font.set('Impact')
+# app('Keynote').documents[1].slides[1].default_body_item.object_text.size.set(36)
+# app('Keynote').documents[1].slides[1].text_items[3].object_text.color.set([25441, 10793, 42404])
+# app('Keynote').documents[1].slides[1].text_items[3].object_text.font.set('Impact')
+# app('Keynote').documents[1].slides[1].text_items[3].object_text.size.set(24)
+
+# Table
+# app('Keynote').documents[1].current_slide.make(new=k.table, with_properties={k.column_count: 4, k.row_count: 6, k.footer_row_count: 1, k.header_column_count: 0, k.header_row_count: 1})
+
+# app('Keynote').documents[1].slides[1].add_chart(row_names=['ROW A'], column_names=['COL A', 'COL B', 'COL C'], data=[[45, 25, 30]], type=k.pie_2d, group_by=k.chart_column)
+
+
+# https://discussions.apple.com/thread/3482680?sortBy=rank
+#tell application "Keynote" to activate
+#tell application "System Events" to tell process "Keynote"
+#	click menu item "Rectangle" of menu 1 of menu item "Shape" of menu 1 of menu bar item "Insert" of menu bar 1
+#end tell
+# app('System Events').processes['Keynote'].menu_bars[1].menu_bar_items['Insert'].menus[1].menu_items['Shape'].menus[1].menu_items['Rectangle'].click()
+#     key code 51 -- delete the rectangle
+
+# Copy and paste ?
+# keystroke “v” using command down
+
+# Change color well
+# https://apple.stackexchange.com/questions/381590/using-applescript-to-change-text-color-in-keynote
+
+# https://n8henrie.com/2013/03/a-strategy-for-ui-scripting-in-applescript/
+
+
+# good for debugging
+# https://n8henrie.com/2013/03/a-strategy-for-ui-scripting-in-applescript/
+
+# app('System Events').processes['Keynote'].windows[1].UI_elements.get()
+
+# app('System Events').processes['Keynote'].windows[1].scroll_areas[1].UI_elements.get()
+
+# 				get description of every UI element
+
+# Select element , actions and properties
+# https://stackoverflow.com/questions/73269754/how-to-get-information-of-a-selected-ui-element
+
+# all elements ? 
+# https://discussions.apple.com/thread/4390028?sortBy=rank

@@ -14,6 +14,9 @@ class KeynoteApp:
         for d in self._keynote.documents.get():
             docs.append(KeynoteDoc(d))
         return docs
+    
+    def get_version(self):
+        return self._keynote.version.get()
 
     def get_themes(self):
         themes=[]
@@ -47,3 +50,4 @@ class KeynoteApp:
 
     docs = property(get_docs)
     themes = property(get_themes)
+    version = property(get_version)

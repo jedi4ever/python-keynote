@@ -18,7 +18,7 @@ class TestKeynoteDoc:
         keynote.open(test_keynote_file)
         doc = keynote.docs[0]
         # The test.key file has more then 1 layout
-        assert doc.layouts > 0
+        assert len(doc.layouts) > 0
         doc.close()
 
     def test_slides_count(self, test_keynote_file):

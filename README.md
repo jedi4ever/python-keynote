@@ -15,7 +15,9 @@ Remarks:
 - Needs a working installed Xcode environment
 
 ## TODO
-- see if we can the original files (audio, movies, images) using [`keynote-parse`](https://pypi.org/project/keynote-parser/)
+- see if we can the original files (audio, movies, images):
+    - using [`keynote-parse`](https://pypi.org/project/keynote-parser/)
+    - or <https://github.com/paulhildebrandt/python-keynote/blob/master/keynote_api.py>
 - set background of slide, text item
 - create text items as bulletlists
 - create shapes (rectangle, circle etc)

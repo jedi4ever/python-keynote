@@ -9,3 +9,4 @@ from .keynote_text_item import KeynoteTextItem
 from .keynote_theme import KeynoteTheme
 from .keynote_process import KeynoteProcess
 from .keynote_window import KeynoteWindow
+from .keynote_shape import KeynoteShape

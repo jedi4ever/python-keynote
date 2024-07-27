@@ -30,21 +30,19 @@ class KeynoteWindow:
         # 2 = Text
         # 3 = Arrange 
         #self._window.radio_groups[1].radio_buttons[1].click()
+        
         # First color well
         #self._window.scroll_areas[1].color_wells[1].click()
 
-
-        # triala
-        # app('System Events').application_processes['Keynote'].windows['Text Color'].splitter_groups[1].radio_groups['Pencils'].radio_buttons['Blueberry'].click()
-        # app('System Events').application_processes['Keynote'].windows['Color Fill'].splitter_groups[1].radio_groups['Color Sliders'].radio_buttons['Blueberry'].click()
-
-        #app('System Events').processes['****'].windows[1].text_fields[1].value.set('here is the text')
-
-#        keynote_process = KeynoteProcess()
-        print(appscript.app('System Events').application_processes['Keynote'].windows['Color Fill'].splitter_groups[1].text_fields['Red'].value.set("90"))
-        print(appscript.app('System Events').application_processes['Keynote'].windows['Color Fill'].splitter_groups[1].text_fields['Green'].value.set("90"))
+        # when the color well is open, set the colors
+        print(appscript.app('System Events').application_processes['Keynote'].windows['Color Fill'].splitter_groups[1].text_fields['Red'].value.set("0"))
+        print(appscript.app('System Events').application_processes['Keynote'].windows['Color Fill'].splitter_groups[1].text_fields['Green'].value.set("0"))
 #        print(appscript.app('System Events').application_processes['Keynote'].windows['Color Fill'].splitter_groups[1].text_fields['Blue'].selected.set(True))
-        print(appscript.app('System Events').application_processes['Keynote'].windows['Color Fill'].splitter_groups[1].text_fields['Blue'].value.set("90"))
+        print(appscript.app('System Events').application_processes['Keynote'].windows['Color Fill'].splitter_groups[1].text_fields['Blue'].value.set("255"))
+
+        # Needs a confirm (alternative is to send a keystroke)
+        appscript.app('System Events').application_processes['Keynote'].windows['Color Fill'].splitter_groups[1].text_fields['Blue'].actions['AXConfirm'].perform()
+
 
         # Try enter or action "AXConfirm"
         # https://www.macscripter.net/t/set-value-of-text-field/75926/8

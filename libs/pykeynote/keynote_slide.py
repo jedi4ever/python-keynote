@@ -4,6 +4,7 @@ from pykeynote.keynote_image import KeynoteImage
 from pykeynote.keynote_movie import KeynoteMovie
 from pykeynote.keynote_text_item import KeynoteTextItem
 from pykeynote.keynote_layout import KeynoteLayout
+from pykeynote.keynote_shape import KeynoteShape
 
 
 class KeynoteSlide:
@@ -54,6 +55,12 @@ class KeynoteSlide:
             text_items.append(KeynoteTextItem(t))
         return text_items
     
+    def get_shapes(self):
+        shapes = []
+        for s in self._slide.shapes.get():
+            shapes.append(KeynoteShape(s))
+        return shapes
+    
     def get_body_showing(self):
         return self._slide.body_showing.get()
     
@@ -98,8 +105,11 @@ class KeynoteSlide:
     name = property(get_name)
     title = property(get_title, set_title)
     body = property(get_body, set_body)
+    text_items = property(get_text_items)
     images = property(get_images)
     movies = property(get_movies)
+    shapes = property(get_shapes)
+
     text_items = property(get_text_items)
     skipped = property(get_skipped)
     body_showing = property(get_body_showing)

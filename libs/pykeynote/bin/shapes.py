@@ -6,7 +6,7 @@ keynote_app = KeynoteApp()
 keynote_app.activate()
 keynote_process = KeynoteProcess()
 
-keynote_process.add_rectangle()
+#keynote_process.add_rectangle()
 
 keynote_window = keynote_process.windows[0]
 #keynote_window.toggle_document()

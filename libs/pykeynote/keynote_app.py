@@ -42,7 +42,8 @@ class KeynoteApp:
         # This actually closes
         self._keynote.documents.close(saving=k.no)
 
-
+    def activate(self):
+        self._keynote.activate()
 
     def open(self,filename):
         self._keynote.activate()

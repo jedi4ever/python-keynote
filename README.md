@@ -39,6 +39,7 @@ Remarks:
 - We know appscript is deprecated , but hey it works and we can pass a file
 - We use an app called `ASTranslate` to translate applescript scripts to appscript python code
     - <https://appscript.sourceforge.io/tools.html>
+    - beware that the indexed in applescript start from 1 , in appscript from 0
 
 - A related library `keynote-js` can be found for the Javascript ecosystem:
     - <https://github.com/macintoshhelper/keynote-js/blob/master/src/document.ts>

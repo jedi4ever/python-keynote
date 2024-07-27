@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from pykeynote.keynote_app import KeynoteApp
+from pykeynote import KeynoteApp
 
 def demo():
     keynote = KeynoteApp()
